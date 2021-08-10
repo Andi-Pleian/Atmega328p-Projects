@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: default
+folderName: Design
+frameworkPath: C:\Users\Andi\Harmony3
+processor: PIC32MX430F064L
+projectName: Design
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\PIC32MX_DFP\1.5.259\atdf\PIC32MX430F064L.atdf

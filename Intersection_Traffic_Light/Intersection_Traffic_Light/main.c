@@ -9,12 +9,12 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define F_CPU 16000000UL
+#define F_CPU 1600000UL;
 
-#define LED_RG_delay 10000				//ms
-#define LED_Yellow_delay 2000			//ms
+#define LED_RG_delay 100000			
+#define LED_Yellow_delay 20000			
 
-#define Reboot_delay 5000				//ms
+#define Reboot_delay 50000				
 
 typedef struct 
 {
@@ -39,6 +39,8 @@ int main(void)
 	Traffic_Light_2.LED_Green		=		PIND7;
 	
 	unsigned short rebooted = 1;
+	
+	DDRD |= 1 << PIND2;
 	
     while (1) 
     {
@@ -71,7 +73,9 @@ int main(void)
 		_delay_ms(LED_Yellow_delay);
 		PORTD &= ~(1 << Traffic_Light_1.LED_Yellow);
 		PORTD &= ~(1 << Traffic_Light_2.LED_Yellow);
-		
     }
+	
+	return 0;
+	
 }
 
